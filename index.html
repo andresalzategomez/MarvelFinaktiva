@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style/style.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+
+    <title>Marvel</title>
+</head>
+
+<body onload="getCharacters()">
+    <div id="id_header" class="header">
+        <img src="./images/logo.png" alt="Marvel" class="logoMarvel">
+        <div class="contSearch">
+            <input onchange="getCharacters(this.value)" type="search" name="searchcharacter  "
+                placeholder="Search character..." class="inputSearch">
+            <span class="fa fa-search form-control-feedback"></span>
+        </div>
+    </div>
+
+    <div class="contPpal">
+        <div class="contPpalCharacter">
+            <div class="contTittleCharacters">
+                <div class="imgTitleCharacters">
+                    <img src="./images/characters.png" alt="Characters" class="iconCharacters">
+                    <p class="tittleCharacters"> Characters</p>
+                </div>
+                <div>
+                    <select name="clasification" class="selectClasification">
+                        <option value="value1" selected disabled>Sort by</option>
+                        <option value="value2">A-Z</option>
+                        <option value="value3">Z-A</option>
+                    </select>
+                </div>
+            </div>
+            <div id="idContCharacters" class="contCharacters">
+            </div>
+            <div class="pagination">
+                <p id="info" class="info"></p>
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+                
+            </div>
+        </div>
+
+        <div class="contfavourites">
+            <div class="contTittlefavourites">
+                <div class="titleCont">
+                    <img src="./images/favourites.png" alt="favourites" class="iconfavourites">
+                    <p class="tittlefavourites"> My favourites</p>
+                </div>
+                <div id="favContainer" class="favContainer">
+                </div>
+                <div id="favRandomContainer" class="favContainer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal1">
+        <div class="modal-dialog">
+            <div class="close-modal" aria-label="close modal" data-close>
+                <img src="./images/btn-close.png" alt="">
+            </div>
+            <section id="sectionContInfo" class="modal-content">
+            </section>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <script src="./js/services/consumeapi.js"></script>
+    <script src="./js/services/favServices.js"></script>
+
+    <!-- Data -->
+    <script src="./js/data/save.js"></script>
+
+    <!-- Model -->
+    <script src="./js/model/favourite.js"></script>
+
+    <!-- Utils -->
+    <script src="./js/utils/md5.min.js"></script>
+
+    <!-- Application -->
+    <script>
+        const docum = document;
+    </script>
+    <script src="./js/application/modal.js"></script>
+    <script src="./js/application/loadFavorites.js"></script>
+    <script src="./js/application/loadCharacter.js"></script>
+
+
+</body>
+
+</html>

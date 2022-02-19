@@ -1,0 +1,158 @@
+:root {
+  --lightgray: #efefef;
+  --blue: steelblue;
+  --white: #fff;
+  --black: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--black);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;  
+}
+
+.modal-content
+{
+  position: relative;
+  bottom: 2vh;
+  .contInfo
+  {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    margin-top: 0;
+    
+
+    .modalImg
+    {
+      width: 30%;
+      min-width: 250px;
+      
+    }
+  
+    .textsModal
+    {
+      display: flex;
+      flex-direction: column;
+      margin-left: 7%;
+  
+      .titleModal
+      {
+        font-weight: bold;
+      }
+  
+      .textModal
+      {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 15;
+        -webkit-box-orient: vertical;
+      }
+    }
+  
+  }
+  
+
+  .contButtons
+  {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    text-align: center;
+
+    .buttonAdd
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: f0f0f0;//#322827;
+      height: 8vh;
+      width: 50%;
+      color: black;
+
+      p
+      {
+        margin-left: 2vh;
+        position: relative;
+        top: 1vh;
+      }
+    }
+  
+    .buttonBuy
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: #dcdcdc;
+      height: 8vh;
+      width: 50%;
+      color: #ec1e22;
+
+      p
+      {
+        margin-left: 2vh;
+        position: relative;
+        top: 1vh;
+      }
+    }
+  }
+  
+  
+}
+
+
+
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-dialog {
+  position: relative;
+  max-width: 60%;
+  max-height: 80vh;
+  border-radius: 5px;
+  background: var(--white);
+  overflow: hidden;
+  cursor: default;
+}
+
+.modal-dialog > * {
+  padding: 1rem;
+}
+
+.modal-header,
+.modal-footer {
+  background: var(--lightgray);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header .close-modal {
+  font-size: 1rem;
+}
+.close-modal
+{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 4vh;
+}

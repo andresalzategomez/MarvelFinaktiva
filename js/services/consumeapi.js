@@ -33,7 +33,7 @@ async function getComics (url, openCom)
   const secretKey = "5671402f2343d72d6fbb326da6e3b23038c7cc60"
   const hashMD5 = md5(ts+secretKey+Apikey)
 
-  return await fetch(`${url}?apikey=${Apikey}&ts=${ts}&hash=${hashMD5}`, requestOptions)
+  return await fetch(`${url.replace(/http/g, "https")}?apikey=${Apikey}&ts=${ts}&hash=${hashMD5}`, requestOptions)
   .then(response => response.json()) 
   .then(result => 
   {

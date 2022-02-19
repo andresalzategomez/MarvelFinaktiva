@@ -5,10 +5,10 @@ function LoadFavourites() {
   let htmlTemplate = "";
   for (const fav of MyFavourites) {
     htmlTemplate += `<div onclick="getComics('${fav.id}', true)" class="favourite">
-    <img onclick="removeFavourite(\`${fav.id}\`)" class="iconDelete" src="./images/btn-delete.png" alt="">
-    <img class="imgFav" src="${fav.img}" alt="">
-    <p class="titleFav">${fav.title}</p>
-</div>`;
+        <img onclick="removeFavourite(\`${fav.id}\`)" class="iconDelete" src="./images/btn-delete.png" alt="">
+        <img class="imgFav" src="${fav.img}" alt="">
+        <p class="titleFav">${fav.title}</p>
+    </div>`;
   }
   favContainer.innerHTML = htmlTemplate;
 }
@@ -25,9 +25,9 @@ async function LoadRandomFavourites() {
     } 
     for (const fav of randomFav) {
       htmlTemplate += `<div onclick="getComics('${fav.id}', true)" class="favourite">
-      <img class="imgFav" src="${fav.img}" alt="">
-      <p class="titleFav">${fav.title}</p>
-  </div>`;
+          <img class="imgFav" src="${fav.img}" alt="">
+          <p class="titleFav">${fav.title}</p>
+      </div>`;
     }
     favRandomContainer.innerHTML = htmlTemplate;
   }

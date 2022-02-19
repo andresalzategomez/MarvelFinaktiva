@@ -6,8 +6,6 @@ const isVisible = "is-visible";
 for (let el of openEls) {
   console.log(el)
   el.addEventListener("click", function() {
-    // const modalId = this.dataset.open;
-    // document.getElementById(modalId).classList.add(isVisible);
   });
 }
 
@@ -24,7 +22,6 @@ document.addEventListener("click", e => {
 });
 
 document.addEventListener("keyup", e => {
-  // if we press the ESC
   if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
     document.querySelector(".modal.is-visible").classList.remove(isVisible);
   }

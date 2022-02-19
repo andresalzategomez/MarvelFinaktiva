@@ -38,7 +38,6 @@ async function LoadCharacters(characters) {
     for (let [index, comic] of character.comics.items.entries()) {
       htmlTemplate += `<p onclick="getComics('${comic.resourceURI}', true)" class="comicsRelated" >${comic.name}"</p>`;
       myRandomFavorites.push(comic);
-      console.log(myRandomFavorites);
       if (index == limit) break;
     }
     htmlTemplate += `</div>

@@ -19,7 +19,6 @@ async function getCharacters (name=null)
   .then(response => response.json()) 
   .then(result => 
   {
-    // console.log(result.data.results)
     characters = result.data.results;
     render();  
   })

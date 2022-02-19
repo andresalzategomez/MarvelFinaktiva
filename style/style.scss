@@ -38,7 +38,6 @@ body
         position: relative;
         left: 20%;
         width: 40%;
-        //border: 1px solid white;
         .inputSearch
         {
             display: flex;
@@ -154,16 +153,10 @@ body
                     .textCharacter
                     {
                         font-size: 2vh;
-                        // width: 1em;
                         position: relative;
                         bottom: 2.5vh;
                         padding-right: 1vh;
                         text-align: justify;
-                        // text-overflow: ellipsis;
-                        // display: -webkit-box;
-                        // -webkit-line-clamp: 6;
-                        // overflow: hidden;
-                        // -webkit-box-orient: vertical;
                     }
 
                     .buttonViewMore
